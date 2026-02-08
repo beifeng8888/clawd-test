@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人展示页</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="name">李明</h1>
+            <p class="title">计算机科学专业 | 全栈开发学习者</p>
+            <p class="intro">专注于构建简洁、高效的Web应用，对用户体验和代码质量有持续的热情。</p>
+        </header>
+
+        <main>
+            <section class="section" id="about">
+                <h2 class="section-title">关于我</h2>
+                <div class="section-content">
+                    <p>我是一名对技术充满好奇心的大学生，热衷于通过代码解决实际问题。目前正在深入学习现代Web开发技术栈，并尝试将所学应用于个人项目中。我相信清晰的结构和简约的设计能带来更好的沟通。</p>
+                </div>
+            </section>
+
+            <section class="section" id="projects">
+                <h2 class="section-title">项目经历</h2>
+                <div class="projects-list" id="projectsContainer">
+                    <!-- 项目卡片将由JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <section class="section" id="skills">
+                <h2 class="section-title">技能概览</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>前端</h3>
+                        <ul class="skill-tags">
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>后端</h3>
+                        <ul class="skill-tags">
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>MySQL</li>
+                            <li>RESTful API</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>工具与其他</h3>
+                        <ul class="skill-tags">
+                            <li>Git</li>
+                            <li>Figma</li>
+                            <li>VS Code</li>
+                            <li>Linux</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <h2 class="section-title">联系方式</h2>
+                <div class="contact-links">
+                    <a href="mailto:example@university.edu" class="contact-link">
+                        <i class="fas fa-envelope"></i> example@university.edu
+                    </a>
+                    <a href="https://github.com/username" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="currentYear"></span> 李明. 简约个人页.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

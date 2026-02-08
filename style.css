@@ -1,0 +1,235 @@
+/* 基础重置与字体 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #333; /* 深灰色文字 */
+    background-color: #fff; /* 白色背景 */
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* 主容器 - 单栏居中布局 */
+.container {
+    max-width: 800px; /* 控制内容宽度，创造留白 */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 页头 */
+.header {
+    text-align: center;
+    margin-bottom: 80px; /* 大留白 */
+}
+
+.name {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.intro {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 通用区块样式 */
+.section {
+    margin-bottom: 80px; /* 区块间大留白 */
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.section-content {
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* 项目经历 - 卡片列表 */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* 卡片间距 */
+}
+
+.project-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: #fafafa;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.project-year {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-desc {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 技能概览 */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.skill-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags li {
+    background-color: #f1f3f5;
+    color: #495057;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* 联系方式 */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #555;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #0077b5; /* LinkedIn 蓝色 */
+}
+
+.contact-link i {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    margin-top: 100px; /* 底部大留白 */
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .name {
+        font-size: 2.8rem;
+    }
+
+    .section {
+        margin-bottom: 60px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 2.2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-links {
+        align-items: flex-start;
+    }
+}
