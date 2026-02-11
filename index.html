@@ -6,85 +6,98 @@
     <title>个人展示页</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="name">李明</h1>
-            <p class="title">计算机科学专业 | 全栈开发学习者</p>
-            <p class="intro">专注于构建简洁、高效的Web应用，对用户体验和代码质量有持续的热情。</p>
-        </header>
+    <div class="dashboard">
 
-        <main>
-            <section class="section" id="about">
-                <h2 class="section-title">关于我</h2>
-                <div class="section-content">
-                    <p>我是一名对技术充满好奇心的大学生，热衷于通过代码解决实际问题。目前正在深入学习现代Web开发技术栈，并尝试将所学应用于个人项目中。我相信清晰的结构和简约的设计能带来更好的沟通。</p>
+        <!-- 板块 A: 个人信息 (左上大块) -->
+        <div class="panel panel-hero">
+            <div class="panel-inner">
+                <div class="badge">AVAILABLE FOR INTERNSHIP</div>
+                <h1 class="name">李明</h1>
+                <p class="title">全栈开发学习者</p>
+                <p class="intro">构建简洁、高效的 Web 应用，对用户体验与代码质量保持持续热情。</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
-            </section>
+            </div>
+            <div class="hero-deco">CS</div>
+        </div>
 
-            <section class="section" id="projects">
-                <h2 class="section-title">项目经历</h2>
-                <div class="projects-list" id="projectsContainer">
-                    <!-- 项目卡片将由JavaScript动态生成 -->
+        <!-- 板块 B: 技能 (右上) -->
+        <div class="panel panel-skills">
+            <div class="panel-label">SKILLS</div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="skill-icon"><i class="fab fa-react"></i></span>
+                    <span>React</span>
                 </div>
-            </section>
-
-            <section class="section" id="skills">
-                <h2 class="section-title">技能概览</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>前端</h3>
-                        <ul class="skill-tags">
-                            <li>HTML/CSS</li>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>Vue.js</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>后端</h3>
-                        <ul class="skill-tags">
-                            <li>Node.js</li>
-                            <li>Python</li>
-                            <li>MySQL</li>
-                            <li>RESTful API</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>工具与其他</h3>
-                        <ul class="skill-tags">
-                            <li>Git</li>
-                            <li>Figma</li>
-                            <li>VS Code</li>
-                            <li>Linux</li>
-                        </ul>
-                    </div>
+                <div class="skill-item">
+                    <span class="skill-icon"><i class="fab fa-vuejs"></i></span>
+                    <span>Vue.js</span>
                 </div>
-            </section>
+                <div class="skill-item">
+                    <span class="skill-icon"><i class="fab fa-node-js"></i></span>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon"><i class="fab fa-python"></i></span>
+                    <span>Python</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon"><i class="fas fa-database"></i></span>
+                    <span>MongoDB</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon"><i class="fab fa-git-alt"></i></span>
+                    <span>Git</span>
+                </div>
+            </div>
+        </div>
 
-            <section class="section" id="contact">
-                <h2 class="section-title">联系方式</h2>
+        <!-- 板块 C: 关于我 (横跨) -->
+        <div class="panel panel-about">
+            <div class="panel-label">ABOUT</div>
+            <p class="about-text">就读于某知名高校计算机科学专业大三，专注于 Web 全栈开发方向。热衷于将想法快速转化为可运行的产品原型，有多个独立项目经历。</p>
+            <div class="stats-row">
+                <div class="stat"><span class="stat-num">4+</span><span class="stat-label">项目</span></div>
+                <div class="stat"><span class="stat-num">2</span><span class="stat-label">年经验</span></div>
+                <div class="stat"><span class="stat-num">6</span><span class="stat-label">技术栈</span></div>
+            </div>
+        </div>
+
+        <!-- 板块 D: 项目经历 (左下大块) -->
+        <div class="panel panel-projects">
+            <div class="panel-label">PROJECTS</div>
+            <div id="projectsContainer" class="projects-list"></div>
+        </div>
+
+        <!-- 板块 E: 联系方式 (右下) -->
+        <div class="panel panel-contact">
+            <div class="panel-label">CONTACT</div>
+            <div class="contact-content">
+                <p class="contact-cta">有好的想法？<br>一起聊聊吧。</p>
                 <div class="contact-links">
-                    <a href="mailto:example@university.edu" class="contact-link">
-                        <i class="fas fa-envelope"></i> example@university.edu
+                    <a href="mailto:liming@example.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>liming@example.com</span>
                     </a>
-                    <a href="https://github.com/username" target="_blank" class="contact-link">
-                        <i class="fab fa-github"></i> GitHub
+                    <a href="#" class="contact-item">
+                        <i class="fab fa-weixin"></i>
+                        <span>liming_wx</span>
                     </a>
-                    <a href="https://linkedin.com/in/username" target="_blank" class="contact-link">
-                        <i class="fab fa-linkedin"></i> LinkedIn
+                    <a href="#" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/liming</span>
                     </a>
                 </div>
-            </section>
-        </main>
+            </div>
+            <div class="contact-deco">👋</div>
+        </div>
 
-        <footer class="footer">
-            <p>© <span id="currentYear"></span> 李明. 简约个人页.</p>
-        </footer>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
